@@ -18,10 +18,20 @@ export default class ChristmasLight {
     return this.lights;
   }
 
-  execute(from: number[], to: number[]) {
+  execute(from: number[], to: number[], action: "on" | "off" | "toggle") {
     for (let i = from[0]; i <= to[0]; i++) {
       for (let j = from[1]; j <= to[1]; j++) {
-        this.lights[i][j] = true;
+        switch (action) {
+          case "toggle":
+            this.lights[i][j] = !this.lights[i][j];
+            continue;
+          case "on":
+            this.lights[i][j] = true;
+            continue;
+          case "off":
+            this.lights[i][j] = false;
+            continue;
+        }
       }
     }
 

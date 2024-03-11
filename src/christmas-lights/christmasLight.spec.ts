@@ -11,63 +11,63 @@ describe("Christmas kata", () => {
   });
 
   test("turn on 887,9 through 959,629", () => {
-    christmasLights.execute([887, 9], [959, 629]);
+    christmasLights.execute([887, 9], [959, 629], "on");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 454,398 through 844,448", () => {
-    christmasLights.execute([454, 398], [844, 448]);
+    christmasLights.execute([454, 398], [844, 448], "on");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 539,243 through 559,965", () => {
-    christmasLights.execute([539, 243], [559, 965]);
+    christmasLights.execute([539, 243], [559, 965], "off");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
-  test("turn on 379,819 through 676,868", () => {
-    christmasLights.execute([379, 819], [676, 868]);
+  test("turn on 370,819 through 676,868", () => {
+    christmasLights.execute([370, 819], [676, 868], "off");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 145,40 through 370,997", () => {
-    christmasLights.execute([145, 40], [370, 997]);
+    christmasLights.execute([145, 40], [370, 997], "off");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 301,3 through 808,453", () => {
-    christmasLights.execute([301, 3], [808, 453]);
+    christmasLights.execute([301, 3], [808, 453], "off");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 351,678 through 951,908", () => {
-    christmasLights.execute([351, 678], [951, 908]);
+    christmasLights.execute([351, 678], [951, 908], "on");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 720,196 through 897,994", () => {
-    christmasLights.execute([720, 196], [897, 994]);
+    christmasLights.execute([720, 196], [897, 994], "toggle");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
   });
 
   test("turn on 831,394 through 904,860", () => {
-    christmasLights.execute([831, 394], [904, 860]);
+    christmasLights.execute([831, 394], [904, 860], "toggle");
     const result = christmasLights.countTrueValues();
 
     expect(result).toBe(result);
