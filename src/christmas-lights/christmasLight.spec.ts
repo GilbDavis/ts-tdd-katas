@@ -72,4 +72,20 @@ describe("Christmas kata", () => {
 
     expect(result).toBe(result);
   });
+
+  test("Turn on 0, 0 through 0, 0", () => {
+    const chirstmasL = new ChristmasLight();
+    chirstmasL.execute([0, 0], [0, 0], "on");
+    const result = chirstmasL.countTrueValues();
+
+    expect(result).toBe(1);
+  });
+
+  test("Toggle 0, 0 through 999, 999", () => {
+    const chirstmasL = new ChristmasLight();
+    chirstmasL.execute([0, 0], [999, 999], "toggle");
+    const result = chirstmasL.countTrueValues();
+
+    expect(result).toBe(2000000);
+  });
 });
