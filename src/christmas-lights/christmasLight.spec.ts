@@ -1,4 +1,5 @@
 import ChristmasLight from "./ChristmasLight";
+import { instructions } from "./instructions";
 
 describe("Christmas kata", () => {
   let christmasLights = new ChristmasLight();
@@ -87,5 +88,34 @@ describe("Christmas kata", () => {
     const result = chirstmasL.countTrueValues();
 
     expect(result).toBe(2000000);
+  });
+
+  test("Final kata test", () => {
+    const christmasGrid = new ChristmasLight();
+
+    for (const instruction of instructions) {
+      const data = instruction.split(" ");
+
+      if (data[0] === "turn") {
+        const firstParam = data[2].split(",").map((data) => Number(data));
+        const secondParam = data[4].split(",").map((data) => Number(data));
+
+        switch (data[1]) {
+          case "on":
+            christmasGrid.execute(firstParam, secondParam, "on");
+            continue;
+          case "off":
+            christmasGrid.execute(firstParam, secondParam, "off");
+            continue;
+        }
+      }
+
+      // toggle logic
+      const firstParam = data[1].split(",").map((data) => Number(data));
+      const secondParam = data[3].split(",").map((data) => Number(data));
+
+      christmasGrid.execute(firstParam, secondParam, "toggle");
+    }
+    const result = christmasGrid.countTrueValues();
   });
 });
