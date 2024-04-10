@@ -30,7 +30,7 @@ export default class ChristmasLight {
             this.lights[i][j] += 2;
             continue;
           case "on":
-            this.lights[i][j]++;
+            ++this.lights[i][j];
             continue;
           case "off":
             this.lights[i][j] = Math.max(0, this.lights[i][j] - 1);
